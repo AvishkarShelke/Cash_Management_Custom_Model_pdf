@@ -19,7 +19,7 @@ def extract_index(label: str, prefix: str):
 def sayHello():
     return { 'message': 'Hello' }
 
-@app.post("/jsonpraser")
+@app.post("/jsonparser")
 async def extract_fields(payload: dict = Body(...)):
     customer_name = ""
     payment_reference = None
