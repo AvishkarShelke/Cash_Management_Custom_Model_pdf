@@ -15,6 +15,9 @@ def extract_index(label: str, prefix: str):
     idx = label.replace(prefix, "")
     return idx if idx else "1"
 
+@app.get('/')
+def sayHello():
+    return { 'message': 'Hello' }
 
 @app.post("/jsonpraser")
 async def extract_fields(payload: dict = Body(...)):
