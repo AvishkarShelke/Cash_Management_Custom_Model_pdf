@@ -16,7 +16,7 @@ def extract_index(label: str, prefix: str):
     return idx if idx else "1"
 
 
-@app.post("/extract")
+@app.post("/jsonpraser")
 async def extract_fields(payload: dict = Body(...)):
     customer_name = ""
     payment_reference = None
